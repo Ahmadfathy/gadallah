@@ -1,17 +1,7 @@
 (function($) {
     "use strict";
 
-    /*-------------------------------------
-     jQuery MeanMenu activation code
-     --------------------------------------*/
-    $('nav#dropdown').meanmenu({ siteLogo: "<a href='index.html' class='logo-mobile-menu'><img src='img/logo.png' /></a>" });
 
-    /*-------------------------------------
-     Home page 4 Category Menu
-     -------------------------------------*/
-    $('#menu-content').on('click', 'li.has-sub-menu > a', function(e) {
-        e.preventDefault();
-    });
 
     /*-------------------------------------
      wow js active
@@ -34,7 +24,7 @@
     /*-------------------------------------
      Carousel slider initiation
      -------------------------------------*/
-    $('.metro-carousel').each(function() {
+    $('.Gadallah-carousel').each(function() {
         var carousel = $(this),
             loop = carousel.data('loop'),
             items = carousel.data('items'),
@@ -105,31 +95,6 @@
                 }
             }
         });
-
-    });
-
-
-    /*-------------------------------------
-     Countdown activation code
-     -------------------------------------*/
-    $('#countdown').countdown('2018/01/01', function(e) {
-        $(this).html(e.strftime("<div class='countdown-section'><h3>%-d</h3> <p>day%!d</p> </div><div class='countdown-section'><h3>%H</h3> <p>Hour%!H</p> </div><div class='countdown-section'><h3>%M</h3> <p>Min%!M</p> </div><div class='countdown-section'><h3>%S</h3> <p>Sec%!S</p> </div>"));
-    });
-
-    /*-------------------------------------
-     Jquery Serch Box
-     -------------------------------------*/
-    $(document).on('click', '#top-search-form a.search-button', function(e) {
-        e.preventDefault();
-
-        var targrt = $(this).prev('input.search-input');
-        targrt.animate({
-            width: ["toggle", "swing"],
-            height: ["toggle", "swing"],
-            opacity: "toggle"
-        }, 500, "linear");
-
-        return false;
 
     });
 
@@ -241,31 +206,6 @@
         target.text($this.text());
     });
 
-
-    /*-------------------------------------
-     Shop category submenu positioning
-     -------------------------------------*/
-    $('#category-menu-area,#category-menu-area-top').on("mouseenter", "ul > li", function() {
-        var self = $(this),
-            target = self.find('ul.dropdown-menu'),
-            targetUlW = target.outerWidth(),
-            parentHolder = self.parents('.category-menu-area'),
-            w = $(window).width() - (parentHolder.offset().left + parentHolder.width());
-        if (targetUlW > w) {
-            target.css({
-                'top': 0,
-                'left': '-' + targetUlW + 'px'
-            });
-        }
-    }).on("mouseleave", "ul li > a", function() {
-        var self = $(this),
-            target = self.find('ul.dropdown-menu');
-        target.css({
-            'top': '',
-            'left': ''
-        });
-    });
-
     /*-------------------------------------
      Auto height for product listing
      -------------------------------------*/
@@ -323,18 +263,6 @@
     }); // end window load function
 
     /*-------------------------------------
-     Call the load and resized function
-     -------------------------------------*/
-    $(window).on('load resize', function() {
-        equalHeight(); // Call Equal height function
-        //Define the maximum height for mobile menu
-        var wHeight = $(window).height(),
-            mLogoH = $('a.logo-mobile-menu').outerHeight();
-        wHeight = wHeight - 50;
-        $('.mean-nav > ul').css('height', wHeight + 'px');
-    });
-
-    /*-------------------------------------
      window scroll function
      -------------------------------------*/
     $(window).on('scroll', function() {
@@ -385,3 +313,40 @@
     }
 
 })(jQuery);
+
+
+
+$(function () {
+      $('a[href="#search"]').on('click', function(event) {
+          event.preventDefault();
+          $('#search').addClass('open');
+          $('#search > form > input[type="search"]').focus();
+      });
+      
+      $('#search, #search button.close').on('click keyup', function(event) {
+          if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+              $(this).removeClass('open');
+          }
+      });
+      
+      
+      //Do not include! This prevents the form from submitting for DEMO purposes only!
+      $('form').submit(function(event) {
+          event.preventDefault();
+          return false;
+      })
+    });
+
+
+$(window).on('scroll', function(){
+    if( $(window).scrollTop()>10 ){
+      $('#site-nav').addClass('navbar-solid');
+    } else {
+      $('#site-nav').removeClass('navbar-solid');
+    }
+});
+
+
+
+
+
