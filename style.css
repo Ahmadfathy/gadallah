@@ -9009,7 +9009,7 @@ xtab-filter
 
 -------------------------------- */
 .cd-tab-filter-wrapper {
-  background-color: #ffffff;
+  background-color: #E8E8E8;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   z-index: 1;
 }
@@ -9159,7 +9159,6 @@ xgallery
 
 -------------------------------- */
 .cd-gallery {
-    background-color: #f4f4f4;
   padding: 26px 5%;
   width: 100%;
 }
