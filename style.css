@@ -40,7 +40,7 @@ a {
 a:active,
 a:focus,
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
     outline: 0
 }
 .btn:active,
@@ -4298,7 +4298,8 @@ ul {
 }
 .advantage1-area {
     padding: 80px 0;
-    background: #f1f1f1
+    background: #f1f1f1;
+    margin-top: 40px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .advantage1-area {
@@ -9041,7 +9042,7 @@ xtab-filter
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url("../img/cd-icon-arrow.svg") no-repeat center center;
+  background: url("img/cd-icon-arrow.svg") no-repeat center center;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -9052,7 +9053,7 @@ xtab-filter
   top: 0;
   left: 0;
   background-color: #ffffff;
-  box-shadow: inset 0 -2px 0 #41307c;
+  box-shadow: inset 0 -2px 0 #3f98a1;
 }
 .cd-tab-filter li {
   display: none;
@@ -9070,7 +9071,7 @@ xtab-filter
   padding-left: 14px;
 }
 .cd-tab-filter a.selected {
-  background: #41307c;
+  background: #3f98a1;
   color: #ffffff;
 }
 .cd-tab-filter.is-open::after {
@@ -9082,7 +9083,7 @@ xtab-filter
   transform: translateY(-50%) rotate(-180deg);
 }
 .cd-tab-filter.is-open ul {
-  box-shadow: inset 0 -2px 0 #41307c, 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -2px 0 #3f98a1, 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .cd-tab-filter.is-open ul li {
   display: block;
@@ -9120,16 +9121,17 @@ xtab-filter
     color: #9a9a9a;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 14px;
   }
   .no-touch .cd-tab-filter a:hover {
-    color: #41307c;
+    color: #3f98a1;
+    text-decoration: none;
   }
   .cd-tab-filter a.selected {
     background: transparent;
-    color: #41307c;
+    color: #3f98a1;
     /* create border bottom using box-shadow property */
-    box-shadow: inset 0 -2px 0 #41307c;
+    box-shadow: inset 0 -2px 0 #3f98a1;
   }
   .cd-tab-filter.is-open ul li {
     display: inline-block;
@@ -9157,11 +9159,14 @@ xgallery
 
 -------------------------------- */
 .cd-gallery {
+    background-color: #f4f4f4;
   padding: 26px 5%;
   width: 100%;
 }
 .cd-gallery li {
-  margin-bottom: 1.6em;
+    width: 48%;
+    margin-right: 1%;
+  margin-bottom: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   display: none;
 }
@@ -9252,11 +9257,11 @@ xfilter
   left: 0;
   height: 50px;
   width: 100%;
-  background-color: #41307c;
+  background-color: #3f98a1;
   z-index: 2;
 }
 .cd-filter form {
-  padding: 70px 20px;
+  padding: 60px 20px;
 }
 .cd-filter .cd-close {
   position: absolute;
@@ -9266,9 +9271,9 @@ xfilter
   line-height: 50px;
   width: 60px;
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 14px;
   text-align: center;
-  background: #37296a;
+  background: #1e4e52;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -9276,7 +9281,8 @@ xfilter
   z-index: 3;
 }
 .no-touch .cd-filter .cd-close:hover {
-  background: #32255f;
+  background: #44888e;
+  text-decoration: none;
 }
 .cd-filter.filter-is-visible {
   -webkit-transform: translateX(0);
@@ -9294,7 +9300,7 @@ xfilter
     width: 20%;
   }
   .cd-filter form {
-    padding: 70px 10%;
+    padding: 60px 10%;
   }
 }
 
@@ -9310,7 +9316,7 @@ xfilter
   text-indent: 100%;
   color: transparent;
   white-space: nowrap;
-  background: transparent url("../img/cd-icon-filter.svg") no-repeat center center;
+  background: transparent url("img/cd-icon-filter.svg") no-repeat center center;
   z-index: 3;
 }
 .cd-filter-trigger.filter-is-visible {
@@ -9323,7 +9329,7 @@ xfilter
     text-indent: 0;
     color: #9a9a9a;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 14px;
     font-weight: 700;
     padding-left: 24px;
     background-position: left center;
@@ -9332,7 +9338,8 @@ xfilter
     transition: color 0.3s;
   }
   .no-touch .cd-filter-trigger:hover {
-    color: #41307c;
+    color: #3f98a1;
+    text-decoration: none;
   }
   .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible:hover {
     color: #ffffff;
@@ -9345,17 +9352,17 @@ xcustom form elements
 
 -------------------------------- */
 .cd-filter-block {
-  margin-bottom: 1.6em;
+  margin-bottom: 5px;
 }
 .cd-filter-block h4 {
   /* filter block title */
   position: relative;
-  margin-bottom: .2em;
-  padding: 10px 0 10px 20px;
+  margin-bottom: 5px;
+  padding: 5px 0 5px 20px;
   color: #9a9a9a;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -9363,7 +9370,7 @@ xcustom form elements
   cursor: pointer;
 }
 .no-touch .cd-filter-block h4:hover {
-  color: #41307c;
+  color: #3f98a1;
 }
 .cd-filter-block h4::before {
   /* arrow */
@@ -9373,7 +9380,7 @@ xcustom form elements
   top: 50%;
   width: 16px;
   height: 16px;
-  background: url("../img/cd-icon-arrow.svg") no-repeat center center;
+  background: url("img/cd-icon-arrow.svg") no-repeat center center;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -9403,7 +9410,7 @@ xcustom form elements
 .cd-filter-block input[type='text'],
 .cd-filter-block select {
   width: 100%;
-  padding: .8em;
+  padding: 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9416,14 +9423,14 @@ xcustom form elements
 .cd-filter-block select:focus {
   outline: none;
   background-color: #ffffff;
-  border-color: #41307c;
+  border-color: #3f98a1;
 }
 .cd-filter-block input[type='search'] {
   /* custom style for the search element */
   border-color: transparent;
   background-color: #e6e6e6;
   /* prevent jump - ios devices */
-  font-size: 1.6rem !important;
+  font-size: 14px !important;
 }
 .cd-filter-block input[type='search']::-webkit-search-cancel-button {
   display: none;
@@ -9447,19 +9454,19 @@ xcustom form elements
   display: block;
   width: 16px;
   height: 16px;
-  background: url("../img/cd-icon-arrow.svg") no-repeat center center;
+  background: url("img/cd-icon-arrow.svg") no-repeat center center;
   pointer-events: none;
 }
 .cd-filter-block select {
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 .cd-filter-block select::-ms-expand {
   display: none;
 }
 .cd-filter-block .list li {
   position: relative;
-  margin-bottom: .8em;
+  /*margin-bottom: 4px;*/
 }
 .cd-filter-block .list li:last-of-type {
   margin-bottom: 0;
@@ -9478,7 +9485,7 @@ xcustom form elements
 .cd-filter-block .checkbox-label,
 .cd-filter-block .radio-label {
   padding-left: 24px;
-  font-size: 1.4rem;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -9513,7 +9520,7 @@ xcustom form elements
   /* check mark style for check boxes */
   width: 16px;
   height: 16px;
-  background: url("../img/cd-icon-check.svg") no-repeat center center;
+  background: url("img/cd-icon-check.svg") no-repeat center center;
 }
 .cd-filter-block .radio-label::before,
 .cd-filter-block .radio-label::after {
@@ -9528,8 +9535,8 @@ xcustom form elements
 }
 .cd-filter-block input[type=radio]:checked + label::before,
 .cd-filter-block input[type=checkbox]:checked + label::before {
-  border-color: #41307c;
-  background-color: #41307c;
+  border-color: #3f98a1;
+  background-color: #3f98a1;
 }
 .cd-filter-block input[type=radio]:checked + label::after,
 .cd-filter-block input[type=checkbox]:checked + label::after {
@@ -9541,4 +9548,10 @@ xcustom form elements
   .cd-filter-block .cd-select::after {
     display: none;
   }
+}
+.padding_top_30 {
+    padding-top: 30px;
+}
+.padding_top_0 {
+    padding-top: 0px;
 }
